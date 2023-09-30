@@ -57,20 +57,18 @@ public class seminar_1 {
         products.add(gun_for_die2);
         products.add(gun_for_die3);
 
-        // VendingMachine vendingMachine = new VendingMachine(products);
-        // BotleOfWater botleOfWater =  vendingMachine.getBotleOfWater("Бутылка с водой", 3);
-        // if(botleOfWater!=null){
-        //     System.out.println("Вы получили: ");
-        //     System.out.println(botleOfWater.displayInfo());
-        // }
-        // else {
-        //     System.out.println("Такой бутылки с водой нет в автомате");
-        // }
-        // }
+        VendingMachine vendingMachine = new VendingMachine(products);
+        BotleOfWater botleOfWater =  vendingMachine.getBotleOfWater("Бутылка с водой", 3);
+         if(botleOfWater!=null){
+             System.out.println("Вы получили: ");
+             System.out.println(botleOfWater.displayInfo());
+         }
+         else {
+             System.out.println("Такой бутылки с водой нет в автомате");
+         }
 
 
-        VendingMachine vendingMachine_gun = new VendingMachine(products);
-        Gun_for_die gun_for_die = vendingMachine_gun.getGun_for_die(6000, 25);
+        Gun_for_die gun_for_die = vendingMachine.getGun_for_die(6000, 25);
         if(gun_for_die!=null){
             System.out.println("Стреляй себе в голову вот этим : ");
             System.out.println(gun_for_die.displayInfo());
